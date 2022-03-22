@@ -1,0 +1,35 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
+
+class ToDoList extends Model 
+{
+    protected $table = 'todo_list';
+    
+    use Notifiable;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'userID', 
+        'caption', 
+        'flag', 
+        'active',
+        'updated_at',
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        
+    ];
+}
